@@ -1,4 +1,4 @@
-## New Relic RabbitMQ Plugin
+## New Relic Sidekiq Plugin
 
 This plugin reports statistics from Sidekiq to NewRelic such as:
 

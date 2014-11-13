@@ -25,6 +25,7 @@ newrelic:
 #
 agents:
   # this is where configuration for agents belongs
-  rabbitmq:
-  - uri: http://example.com:15672 # RabbitMQ managament URI
-    name: Production RabbitMQ # Name that will show up in NewRelic
+  sidekiq:
+  - uri: redis://localhost:6379 # Redis URI
+    name: Production Sidekiq # Name that will show up in NewRelic
+    namespace: "foo" # if you are namespacing
