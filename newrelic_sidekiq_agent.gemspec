@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = '2.2.2'
   s.required_ruby_version = '>= 1.9.3'
 
-  s.name              = 'newrelic_sidekiq_plugin'
+  s.name              = 'newrelic_sidekiq_agent'
   s.version           = NewRelicSidekiqPlugin::VERSION
   s.license           = 'MIT'
 
