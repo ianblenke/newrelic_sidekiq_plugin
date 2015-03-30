@@ -22,8 +22,14 @@ module NewRelicSidekiqPlugin
     end
 
     def setup_metrics
-      Sidekiq.configure_client do |config|
-        config.redis = { url: uri, namespace: namespace }
+      Sidekiq.configure_server do |config|
+        if namespace && namespace.length > 0
+          config.redis = { url: uri, namespace: namespace }
+        else
+          config.redis = ConnectionPool.new(:size => 1, :timeout => 1) do
+            Redis.new(url: uri)
+          end
+        end
       end
       @jobs_failed    = NewRelic::Processor::EpochCounter.new
       @jobs_processed = NewRelic::Processor::EpochCounter.new
