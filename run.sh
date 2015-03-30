@@ -1,7 +1,9 @@
 #!/bin/bash
 export BUNDLE_GEMFILE=/usr/src/app/Bundle.Gemfile
 
-cat <<EOF > config/newrelic_plugin.yml
+cd /usr/src/app
+
+cat <<EOF > /usr/src/app/config/newrelic_plugin.yml
 # Please make sure to update the license_key information with the license key for your New Relic
 # account.
 #
