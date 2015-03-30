@@ -1,5 +1,6 @@
 #!/bin/bash
 export BUNDLE_GEMFILE=/usr/src/app/Build.Gemfile
+export PATH=/usr/local/bundle/bin:$PATH
 
 cd /usr/src/app
 
