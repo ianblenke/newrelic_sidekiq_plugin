@@ -33,9 +33,9 @@ newrelic:
 agents:
   # this is where configuration for agents belongs
   sidekiq:
-  - uri: $REDISTOGO_URL
-    name: $NAME
-    namespace: "$NAMESPACE" # if you are namespacing
+  - name: $NAME
+    uri: $REDISTOGO_URL
+    namespace: $NAMESPACE
 EOF
 
 exec bundle exec foreman start
