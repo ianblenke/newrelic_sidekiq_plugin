@@ -1,5 +1,5 @@
 #!/bin/bash
-export BUNDLE_GEMFILE=/usr/src/app/Bundle.Gemfile
+export BUNDLE_GEMFILE=/usr/src/app/Build.Gemfile
 
 cd /usr/src/app
 

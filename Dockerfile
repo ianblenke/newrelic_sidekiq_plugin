@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 
 COPY Build.Gemfile /usr/src/app/
 COPY Build.Gemfile.lock /usr/src/app/
-RUN bundle config --global gemfile /usr/src/app/Bundle.Gemfile
+RUN bundle config --global gemfile /usr/src/app/Build.Gemfile
 RUN bundle install
 
 COPY . /usr/src/app
