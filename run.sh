@@ -1,4 +1,5 @@
 #!/bin/bash
+export BUNDLE_GEMFILE=/usr/src/app/Bundle.Gemfile
 
 cat <<EOF > config/newrelic_plugin.yml
 # Please make sure to update the license_key information with the license key for your New Relic
@@ -34,4 +35,4 @@ agents:
     namespace: "$NAMESPACE" # if you are namespacing
 EOF
 
-exec foreman start
+exec bundle exec foreman start
